@@ -1,0 +1,154 @@
+:root {
+  --blanc: #fff;
+  --noir: #000;
+}
+
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  height: 400vh;
+}
+
+header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/image-accueil.jpg"), var(--noir);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+header h1 {
+  position: absolute;
+  color: var(--blanc);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 5vw;
+  font-family: "Outfit";
+  opacity: 80%;
+  font-weight: 500;
+}
+
+#defiler {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 2vw;
+  color: var(--blanc);
+  font-family: "Outfit";
+  font-weight: 200;
+}
+
+header p {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  font-size: 11px;
+  font-family: "Outfit";
+  font-weight: 200;
+  color: var(--blanc);
+  opacity: 50%;
+}
+
+main section {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  border: 1px solid red;
+}
+
+#chap1 {
+  background-color: var(--blanc);
+}
+
+#chap2 {
+  background-color: var(--blanc);
+}
+
+#chap3 {
+  background-color: var(--noir);
+}
+
+#chap4 {
+  background-color: var(--noir);
+}
+
+#chap5 {
+  background-color: var(--noir);
+}
+
+#chap6 {
+  background-color: var(--blanc);
+}
+
+/*--------Spritesheet spirale--------*/
+#test {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#spritesheet {
+  position: relative;
+  left: 0;
+  top: -40vh;
+  height: 140vh;
+  background-image: url("../img/spirale.png");
+  background-repeat: no-repeat;
+  background-size: 59000px 1102px;
+  animation-name: spirale;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+  animation-play-state: paused;
+}
+
+@keyframes spirale {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -59000px 0;
+  }
+}
+
+.is-scrolling #test #spritesheet {
+  animation-play-state: running;
+}
+
+/*--------Spritesheet oeil--------*/
+#spritesheet_oeil{
+  position: relative;
+  left: 0;
+  top: -40vh;
+  height: 140vh;
+  background-image: url("../img/oeil_3.png");
+  background-repeat: no-repeat;
+  background-size: 59000px 1102px;
+  animation-name: spirale;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(48);
+  animation-play-state: paused;
+}
+
+@keyframes spirale {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -59000px 0;
+  }
+}
+
+.is-scrolling #test #spritesheet {
+  animation-play-state: running;
+}
+
+#oeil_container {
+  height: 100vh;
+  overflow: hidden;
+}
