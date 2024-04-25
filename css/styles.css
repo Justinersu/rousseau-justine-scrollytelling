@@ -442,6 +442,7 @@ main section {
   width: 100%;
   left: 92.5%;
   fill: var(--blanc);
+  border: 5px solid red;
 }
 
 .ligne.l2 {
