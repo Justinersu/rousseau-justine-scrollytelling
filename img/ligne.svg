@@ -7,6 +7,6 @@
 </style>
 <g>
 	<line class="st0" x1="1679.01" y1="0" x2="1679.01" y2="1080"/>
-	<rect x="2050" width="15" fill="white" height="1080"/>
+	<rect x="1" width="15" fill="white"  height="100%"/>
 </g>
 </svg>

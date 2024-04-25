@@ -1,3 +1,6 @@
+/*--------------------------------------------------------- 
+# Styles Généraux 
+---------------------------------------------------------*/ 
 :root {
   --blanc: #fff;
   --noir: #000;
@@ -60,42 +63,39 @@ main section {
   border: 1px solid red;
 }
 
+.texte {
+  font-family: "Urbanist";
+  font-style: italic;
+  font-size: 3vw;
+}
+
+/*---------------------------------------------------------- 
+# Chapitre 1
+----------------------------------------------------------*/ 
 #chap1 {
-  background-color: var(--blanc);
-}
-
-#chap2 {
-  background-color: var(--blanc);
-}
-
-#chap3 {
-  background-color: var(--noir);
-}
-
-#chap4 {
-  background-color: var(--noir);
-}
-
-#chap5 {
-  background-color: var(--noir);
-}
-
-#chap6 {
-  background-color: var(--blanc);
-}
-
-/*--------Spritesheet spirale--------*/
-#spritesheet_spirale {
+  overflow: hidden;
   position: relative;
-  top: 12vw;
-  left: 41vw;
-  height: 20vw;
-  width: 20vw;
+  background-color: var(--blanc);
+}
+
+#chap1 .texte {
+  position: absolute;
+  left: 6vw;
+  top: 25vh;
+}
+
+/*-- ---------- Début spritesheet spirale -------------------- --*/
+#spritesheet_spirale {
+  position: absolute;
+  top: 30vh;
+  left:  100vh;
+  height: 50vh;
+  width: 50vh;
   aspect-ratio: 1 / 1;
   background-image: url("../img/spirale.png");
   animation-name: spirale;
   animation-duration: 1s;
-  background-size: 4700% 100%;
+  background-size: 4800% 100%;
   animation-iteration-count: infinite;
   animation-timing-function: steps(48);
   animation-play-state: paused;
@@ -106,27 +106,82 @@ main section {
     background-position: 0 0;
   }
   to {
-    background-position: -4700% 0;
+    background-position: -4800% 0;
   }
 }
 
-.is-scrolling #spirale_container_debut #spritesheet_spirale {
+.is-scrolling #spirale_container #spritesheet_spirale {
   animation-play-state: running;
 }
+/*-- ---------- Fin spritesheet spirale -------------------- --*/
 
-/*--------Spritesheet oeil--------*/
+#h-debout {
+  position: absolute;
+  height: 300vh;
+  left: 10vh;
+  bottom: -200vh;
+  display: block;
+
+}
+
+/*---------------------------------------------------------- 
+# Chapitre 2
+----------------------------------------------------------*/ 
+#chap2 {
+  position: relative;
+  background-color: var(--blanc);
+  overflow-y: hidden;
+}
+
+#montagne {
+  position: absolute;
+  height: 70vh;
+  bottom: 0;
+  right: 20vh;
+}
+
+#h-assit {
+  position: absolute;
+  height: 20vh;
+  right: 85vh;
+  top: 12.5vh;
+}
+
+#chaise {
+  position: absolute;
+  height: 20vh;
+  right: 85vh;
+  top: 15vh;
+}
+
+#chap2 .texte {
+  position: absolute;
+  right: 5vw;
+  top: 25vh;
+}
+
+/*---------------------------------------------------------- 
+# Chapitre 3
+----------------------------------------------------------*/ 
+#chap3 {
+  position: relative;
+  background-color: var(--noir);
+}
+
+/*-- ---------- Début spritesheet oeil -------------------- --*/
 #spritesheet_oeil{
   position: relative;
   transform: rotate(30deg);
   animation-delay: 2s;
   left: 10vw;
-  height: 30vw;
-  width: 30vw;
+  top: 2vw;
+  height: 20vw;
+  width: 20vw;
   aspect-ratio: 1 / 1;
   background-image: url("../img/oeil.png");
   animation-name: oeil;
   animation-duration: 1s;
-  background-size: 4700% 100%;
+  background-size: 4800% 100%;
   animation-iteration-count: infinite;
   animation-timing-function: steps(48);
   animation-play-state: paused;
@@ -137,75 +192,73 @@ main section {
     background-position: 0 0;
   }
   to {
-    background-position: -4700% 0;
+    background-position: -4800% 0;
   }
 }
 
-.is-scrolling #oeil_container #spritesheet_oeil {
+.is-scrolling .oeil_container #spritesheet_oeil {
   animation-play-state: running;
 }
 
-#oeil_container {
+.oeil_container {
   position: absolute;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-/*------Chapitre 1-------*/
-#chap1 {
-  overflow: hidden;
-  position: relative;
+.oeil_container.deux {
+  right: -60vw;
+  top: 5vw;
 }
 
-#h-debout {
+.oeil_container.trois #spritesheet_oeil {
+  animation-duration: 2s;
+  transform: rotate(5deg);
+}
+
+.oeil_container.trois {
+  right: -30vw;
+  top: 18vw;
+}
+
+.oeil_container.deux #spritesheet_oeil {
+  animation-duration: 0.5s;
+  transform: rotate(-10deg);
+}
+/*-- ---------- Fin spritesheet oeil -------------------- --*/
+#chap3 .texte {
   position: absolute;
-  height: 300vh;
+  left: 38vw;
+  top: 3vw;
+  color: var(--blanc);
+  opacity: 70%;
 }
 
-#spirale_container_debut {
+#chap3 .texte p:nth-child(2) {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  left: -28vw;
+  top: 20vw;
+  color: var(--blanc);
 }
 
-/*------Chapitre 2-------*/
-#chap2 {
-  position: relative;
-}
-
-#montagne {
+#chap3 .texte p:nth-child(3) {
   position: absolute;
-  height: 70vh;
-  bottom: 0;
-  right: 15vw;
+  right: -28vw;
+  top: 20vw;
+  color: var(--blanc);
 }
 
-#h-assit {
-  position: absolute;
-  height: 20vh;
-  right: 45vw;
-  top: 12.5vh;
-}
-
-#chaise {
-  position: absolute;
-  height: 20vh;
-  right: 45vw;
-  top: 15vh;
-}
-
-/*------Chapitre 3-------*/
-#chap3 {
-  position: relative;
-}
-
-/*------Chapitre 4-------*/
+/*---------------------------------------------------------- 
+# Chapitre 4
+----------------------------------------------------------*/ 
 #chap4 {
   position: relative;
   overflow: hidden;
+  background-color: var(--noir);
 }
 
+/*-- ---------- Début Visages -------------------- --*/
 #visage {
   position: absolute;
   width: 200vw;
@@ -364,119 +417,156 @@ main section {
   right: 39vw;
   opacity: 3%;
 }
+/*-- ---------- Fin Visages -------------------- --*/
+#chap4 .texte {
+  position: absolute;
+  left: 5vw;
+  top: 10vw;
+  color: var(--blanc);
+  opacity: 70%;
+}
 
-/*------Chapitre 5-------*/
+/*---------------------------------------------------------- 
+# Chapitre 5
+----------------------------------------------------------*/ 
 #chap5 {
   position: relative;
   overflow: hidden;
+  background-color: var(--noir);
 }
 
+/*-- ---------- Début Lignes -------------------- --*/
 .ligne {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
-  right: 0;
+  height: 100%;
+  width: 100%;
+  left: 92.5%;
   fill: var(--blanc);
 }
 
 .ligne.l2 {
-  right: 3vw;
+  left: 90%;
   opacity: 90%;
 }
 
 .ligne.l3 {
-  right: 6vw;
+  left: 87.5%;
   opacity: 85%;
 }
 
 .ligne.l4 {
-  right: 9vw;
+  left: 85%;
   opacity: 80%;
 }
 
 .ligne.l5 {
-  right: 12vw;
+  left: 82.5%;
   opacity: 75%;
 }
 
 .ligne.l6 {
-  right: 15vw;
+  left: 80%;
   opacity: 70%;
 }
 
 .ligne.l7 {
-  right: 18vw;
+  left: 77.5%;
   opacity: 65%;
 }
 
 .ligne.l8 {
-  right: 21vw;
+  left: 75%;
   opacity: 60%;
 }
 
 .ligne.l9 {
-  right: 24vw;
+  left: 72.5%;
   opacity: 55%;
 }
 
 .ligne.l10 {
-  right: 27vw;
+  left: 70%;
   opacity: 50%;
 }
 
 .ligne.l11 {
-  right: 30vw;
+  left: 67.5%;
   opacity: 45%;
 }
 
 .ligne.l12 {
-  right: 33vw;
+  left: 65%;
   opacity: 40%;
 }
 
 .ligne.l13 {
-  right: 36vw;
+  left: 62.5%;
   opacity: 35%;
 }
 
 .ligne.l14 {
-  right: 39vw;
+  left: 60%;
   opacity: 30%;
 }
 
 .ligne.l15{
-  right: 42vw;
+  left: 57.5%;
   opacity: 25%;
 }
 
 .ligne.l16 {
-  right: 45vw;
+  left: 55%;
   opacity: 20%;
 }
 
 .ligne.l17 {
-  right: 48vw;
+  left: 52.5%;
   opacity: 15%;
 }
 
 .ligne.l18 {
-  right: 51vw;
+  left: 50%;
   opacity: 10%;
 }
 
 .ligne.l19 {
-  right: 54vw;
+  left: 47.5%;
   opacity: 5%;
 }
 
 .ligne.l20 {
-  right: 57vw;
+  left: 45%;
   opacity: 3%;
 }
+/*-- ---------- Fin Lignes -------------------- --*/
 
 #h-tombe {
   position: absolute;
   right: 30vw;
   width: 30vw;
   z-index: 1;
+}
+
+#chap5 .texte {
+  position: absolute;
+  left: 5vw;
+  top: 10vw;
+  color: var(--blanc);
+  opacity: 70%;
+}
+
+/*---------------------------------------------------------- 
+# Chapitre 6
+----------------------------------------------------------*/
+#chap6 {
+  position: relative;
+  background-color: var(--blanc);
+}
+
+#chap6 .texte {
+  position: absolute;
+  font-style: normal;
+  font-size: 8vw;
+  left: 20vw;
+  top: 8vw;
 }
