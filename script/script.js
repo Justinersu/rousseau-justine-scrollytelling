@@ -97,7 +97,7 @@ gsap
 .from(`#visage20`, { opacity: 0, duration: 1 })
 .from(`#chap4 .texte`, { opacity: 0, duration: 3 })
 
-/*-- ---------- CHAP4 Animation de l'homme qui tombe -------------------- --*/
+/*-- ---------- CHAP5 Animation de l'homme qui tombe -------------------- --*/
 gsap
 .timeline({
   scrollTrigger: {
@@ -107,3 +107,5 @@ gsap
     trigger: `#chap5`
   }
 })
+.fromTo(`#h-tombe`, { y: `-200%`, duration: 1 }, { y: '150%', duration: 2 })
+.from(`#chap5 .texte`, { opacity: 0, duration: 3 }, '<')
