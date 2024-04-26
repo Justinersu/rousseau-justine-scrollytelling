@@ -58,13 +58,13 @@ gsap
     trigger: `#chap3`
   }
 })
-.fromTo(`#chap3 .texte p:nth-child(1)`, { opacity: 0, duration: 2 }, { opacity: 1, duration: 2 })
-.fromTo(`.oeil_container.un`, { opacity: 1, duration: 1 }, { opacity: 0, duration: 1 }, '<')
-.fromTo(`#chap3 .texte p:nth-child(2)`, { opacity: 0, duration: 2 }, { opacity: 1, duration: 2 })
-.fromTo(`.oeil_container.deux`, { opacity: 1, duration: 1 }, { opacity: 0, duration: 1 }, '<')
-.fromTo(`#chap3 .texte p:nth-child(3)`, { opacity: 0, duration: 2 }, { opacity: 1, duration: 2 })
-.fromTo(`.oeil_container.trois`, { opacity: 1, duration: 1 }, { opacity: 0, duration: 1 }, '<')
-.to(`#chap3 .texte`, { opacity: 0, duration: 2 }, '+=2')
+.fromTo(`#chap3 .texte p:nth-child(1)`, { opacity: 0, duration: 4 }, { opacity: 1, duration: 4 })
+.fromTo(`.oeil_container.un`, { opacity: 1, duration: 1 }, { opacity: 0, duration: 3 }, '<')
+.fromTo(`#chap3 .texte p:nth-child(2)`, { opacity: 0, duration: 4 }, { opacity: 1, duration: 4 })
+.fromTo(`.oeil_container.deux`, { opacity: 1, duration: 1 }, { opacity: 0, duration: 3 }, '<')
+.fromTo(`#chap3 .texte p:nth-child(3)`, { opacity: 0, duration: 4 }, { opacity: 1, duration: 4 })
+.fromTo(`.oeil_container.trois`, { opacity: 1, duration: 1 }, { opacity: 0, duration: 3 }, '<')
+.to(`#chap3 .texte`, { opacity: 0, duration: 2 }, '+=5')
 
 /*-- ---------- CHAP4 Animation des visages -------------------- --*/
 gsap
@@ -97,7 +97,7 @@ gsap
 .from(`#visage20`, { opacity: 0, duration: 1 })
 .from(`#chap4 .texte`, { opacity: 0, duration: 3 })
 
-/*-- ---------- CHAP4 Animation de l'homme qui tombe -------------------- --*/
+/*-- ---------- CHAP5 Animation de l'homme qui tombe -------------------- --*/
 gsap
 .timeline({
   scrollTrigger: {
@@ -107,3 +107,17 @@ gsap
     trigger: `#chap5`
   }
 })
+.fromTo(`#h-tombe`, { y: `-200%`, duration: 1 }, { y: `140%`, duration: 2 })
+.from(`#chap5 .texte`, { opacity: 0, duration: 3 }, `<`)
+
+/*-- ---------- CHAP5 Animation du titre -------------------- --*/
+gsap
+.timeline({
+  scrollTrigger: {
+    pin: true,
+    scrub: true,
+    markers: true,
+    trigger: `#chap6`
+  }
+})
+.from(`#chap6 .texte`, { opacity: 0, duration: 3 })
