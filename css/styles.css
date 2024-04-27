@@ -108,10 +108,10 @@ ul.technique-gsap li{
 /*-- ---------- Début spritesheet spirale -------------------- --*/
 #spritesheet_spirale {
   position: absolute;
-  top: 30vh;
-  left:  100vh;
-  height: 50vh;
-  width: 50vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  width: 50%;
   aspect-ratio: 1 / 1;
   background-image: url("../img/spirale.png");
   animation-name: spirale;
@@ -131,18 +131,25 @@ ul.technique-gsap li{
   }
 }
 
-.is-scrolling #spirale_container #spritesheet_spirale {
+.is-scrolling #spritesheet_spirale {
   animation-play-state: running;
 }
 /*-- ---------- Fin spritesheet spirale -------------------- --*/
 
 #h-debout {
   position: absolute;
-  height: 300vh;
-  left: 10vh;
-  bottom: -200vh;
-  display: block;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+}
 
+#ciel {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
 }
 
 /*---------------------------------------------------------- 
@@ -152,6 +159,7 @@ ul.technique-gsap li{
   position: relative;
   background-color: var(--blanc);
   overflow-y: hidden;
+  background-image: url("../img/ciel-etoile.png");
 }
 
 #montagne {
@@ -179,6 +187,12 @@ ul.technique-gsap li{
   position: absolute;
   right: 5vw;
   top: 25vh;
+}
+
+#tentacules {
+  position: absolute;
+  border: 2px solid red;
+  width: 50vw;
 }
 
 /*---------------------------------------------------------- 
@@ -228,6 +242,10 @@ ul.technique-gsap li{
   overflow: hidden;
 }
 
+.oeil_container.un {
+  scale: 0.9;
+}
+
 .oeil_container.deux {
   right: -60vw;
   top: 5vw;
@@ -236,6 +254,7 @@ ul.technique-gsap li{
 .oeil_container.trois #spritesheet_oeil {
   animation-duration: 2s;
   transform: rotate(5deg);
+  scale: 0.8;
 }
 
 .oeil_container.trois {
@@ -582,6 +601,7 @@ ul.technique-gsap li{
 #chap6 {
   position: relative;
   background-color: var(--blanc);
+  overflow: hidden;
 }
 
 #chap6 .texte {
