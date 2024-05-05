@@ -151,9 +151,6 @@ ul.technique-gsap li{
 #chap2 {
   position: relative;
   background-color: var(--blanc);
-<<<<<<< Updated upstream
-  overflow-y: hidden;
-=======
   overflow: hidden;
   background-image: url("../img/ciel-etoile.png");
   background-size: cover;
@@ -166,7 +163,6 @@ ul.technique-gsap li{
   position: relative;
   border: 2px solid blue;
   bottom: -100vh;
->>>>>>> Stashed changes
 }
 
 #montagne {
@@ -196,8 +192,6 @@ ul.technique-gsap li{
   top: 25vh;
 }
 
-<<<<<<< Updated upstream
-=======
 #nuage {
   position: absolute;
   width: 55vw;
@@ -206,8 +200,6 @@ ul.technique-gsap li{
   z-index: -1;
 }
 
-
->>>>>>> Stashed changes
 /*---------------------------------------------------------- 
 # Chapitre 3
 ----------------------------------------------------------*/ 
