@@ -151,7 +151,22 @@ ul.technique-gsap li{
 #chap2 {
   position: relative;
   background-color: var(--blanc);
+<<<<<<< Updated upstream
   overflow-y: hidden;
+=======
+  overflow: hidden;
+  background-image: url("../img/ciel-etoile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 0%;
+}
+
+#paysage {
+  position: relative;
+  border: 2px solid blue;
+  bottom: -100vh;
+>>>>>>> Stashed changes
 }
 
 #montagne {
@@ -164,23 +179,35 @@ ul.technique-gsap li{
 #h-assit {
   position: absolute;
   height: 20vh;
+  top: -87vh;
   right: 85vh;
-  top: 12.5vh;
 }
 
 #chaise {
   position: absolute;
   height: 20vh;
   right: 85vh;
-  top: 15vh;
+  top: -85vh;
 }
 
 #chap2 .texte {
   position: absolute;
-  right: 5vw;
+  right: 10vw;
   top: 25vh;
 }
 
+<<<<<<< Updated upstream
+=======
+#nuage {
+  position: absolute;
+  width: 55vw;
+  right: -6vw;
+  top: 5vw;
+  z-index: -1;
+}
+
+
+>>>>>>> Stashed changes
 /*---------------------------------------------------------- 
 # Chapitre 3
 ----------------------------------------------------------*/ 
@@ -280,11 +307,15 @@ ul.technique-gsap li{
 }
 
 /*-- ---------- Début Visages -------------------- --*/
+.visage {
+  position: absolute;
+  right: -55vw;
+  top: 5vw;
+}
+
 #visage {
   position: absolute;
-  width: 200vw;
   height: 100vh;
-  right: -59vw;
 }
 
 #visage2 {
