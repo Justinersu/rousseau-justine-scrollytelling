@@ -90,6 +90,21 @@ ul.technique-gsap li {
   margin: 5px 0;
 }
 
+footer {
+  position: absolute;
+  font-size: 11px;
+  font-family: "Outfit";
+  font-weight: 200;
+  color: var(--noir);
+  padding: 1vh;
+}
+
+footer a {
+  color: var(--noir);
+  font-weight: 300;
+  text-decoration: none;
+}
+
 /*---------------------------------------------------------- 
 # Chapitre 1
 ----------------------------------------------------------*/
@@ -296,6 +311,17 @@ ul.technique-gsap li {
   color: var(--blanc);
 }
 
+#morph {
+  position: absolute;
+  width: 20vw;
+  top: 25vw;
+  right: 42vw;
+}
+
+#larme {
+  visibility: hidden;
+}
+
 /*---------------------------------------------------------- 
 # Chapitre 4
 ----------------------------------------------------------*/
@@ -477,6 +503,14 @@ ul.technique-gsap li {
   opacity: 70%;
 }
 
+#line {
+  position: absolute;
+  right: -55vw;
+  top: 5vw;
+  border: 5px solid blue;
+
+}
+
 /*---------------------------------------------------------- 
 # Chapitre 5
 ----------------------------------------------------------*/
@@ -594,8 +628,13 @@ ul.technique-gsap li {
 #h-tombe {
   position: absolute;
   right: 30vw;
-  width: 30vw;
+  width: 25vw;
   z-index: 1;
+  top: -100%;
+}
+
+#descente {
+  transform: scale(30%);
 }
 
 #chap5 .texte {

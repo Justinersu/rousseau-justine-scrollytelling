@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: `#chap2`,
       },
     })
-    .fromTo(`#montagne`, { y: `-200%`, duration: 1 }, { y: 0, duration: 1 })
+    .fromTo(`#montagne`, { y: `-250%`, duration: 1 }, { y: 0, duration: 1 })
     .fromTo(`#nuage`, { x: `200%`, duration: 1 }, { x: 0, duration: 1 }, "<")
-    .fromTo(`#chaise`, { y: `-200%`, duration: 1 }, { y: 0, duration: 1 })
-    .fromTo(`#h-assit`, { y: `-200%`, duration: 1 }, { y: 0, duration: 1 })
+    .fromTo(`#chaise`, { y: `-250%`, duration: 1 }, { y: 0, duration: 1 })
+    .fromTo(`#h-assit`, { y: `-250%`, duration: 1 }, { y: 0, duration: 1 })
     .fromTo(
       "#chap2 .texte",
       { opacity: 0, duration: 2 },
@@ -124,7 +124,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: `#chap3`,
       },
     })
-    .from(".oeil_container", { opacity: 0 })
     .fromTo(
       `#chap3 .texte p:nth-child(1)`,
       { opacity: 0 },
@@ -139,7 +138,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
       `#chap3 .texte p:nth-child(3)`,
       { opacity: 0 },
       { opacity: 1, duration: 4 }
-    );
+    )
+    .to("#oeil", { 
+      morphSVG: "#larme", duration: 30
+    })
+    .to("#morph", {
+      y: "200%", duration: 20
+    })
+    .to(".oeil_container", {
+      opacity: 0, duration: 10
+    }, "<")
+    .to("#chap3 .texte", {
+      opacity: 0, duration: 10
+    }, "<");
+
   /*-- ---------- CHAP4 Animation des visages -------------------- --*/
   gsap
     .timeline({
@@ -170,7 +182,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .from(`#visage18`, { opacity: 0, duration: 1 })
     .from(`#visage19`, { opacity: 0, duration: 1 })
     .from(`#visage20`, { opacity: 0, duration: 1 })
-    .from(`#chap4 .texte`, { opacity: 0, duration: 3 });
+    .from(`#chap4 .texte`, { opacity: 0, duration: 3 })
 
   /*-- ---------- CHAP5 Animation de l'homme qui tombe -------------------- --*/
   gsap
