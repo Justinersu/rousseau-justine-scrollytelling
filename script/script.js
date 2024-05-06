@@ -139,18 +139,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
       { opacity: 0 },
       { opacity: 1, duration: 4 }
     )
-    .to("#oeil", { 
-      morphSVG: "#larme", duration: 30
+    .to("#oeil", {
+      morphSVG: "#larme",
+      duration: 30,
     })
     .to("#morph", {
-      y: "200%", duration: 20
+      y: "200%",
+      duration: 20,
     })
-    .to(".oeil_container", {
-      opacity: 0, duration: 10
-    }, "<")
-    .to("#chap3 .texte", {
-      opacity: 0, duration: 10
-    }, "<");
+    .to(
+      ".oeil_container",
+      {
+        opacity: 0,
+        duration: 10,
+      },
+      "<"
+    )
+    .to(
+      "#chap3 .texte",
+      {
+        opacity: 0,
+        duration: 10,
+      },
+      "<"
+    );
 
   /*-- ---------- CHAP4 Animation des visages -------------------- --*/
   gsap
@@ -182,7 +194,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .from(`#visage18`, { opacity: 0, duration: 1 })
     .from(`#visage19`, { opacity: 0, duration: 1 })
     .from(`#visage20`, { opacity: 0, duration: 1 })
-    .from(`#chap4 .texte`, { opacity: 0, duration: 3 })
+    .from(`#chap4 .texte`, { opacity: 0, duration: 3 });
 
   /*-- ---------- CHAP5 Animation de l'homme qui tombe -------------------- --*/
   gsap
@@ -203,7 +215,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scrollTrigger: {
       pin: true,
       markers: true,
-      toggleActions: 'restart complete reverse reset',
+      toggleActions: "restart complete reverse reset",
       trigger: "#chap6",
     },
   });

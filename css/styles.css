@@ -289,6 +289,7 @@ footer a {
   transform: rotate(-10deg);
 }
 /*-- ---------- Fin spritesheet oeil -------------------- --*/
+
 #chap3 .texte {
   position: absolute;
   left: 38vw;
@@ -495,6 +496,7 @@ footer a {
   opacity: 3%;
 }
 /*-- ---------- Fin Visages -------------------- --*/
+
 #chap4 .texte {
   position: absolute;
   left: 5vw;
@@ -508,7 +510,6 @@ footer a {
   right: -55vw;
   top: 5vw;
   border: 5px solid blue;
-
 }
 
 /*---------------------------------------------------------- 
