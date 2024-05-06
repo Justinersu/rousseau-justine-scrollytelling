@@ -1,6 +1,6 @@
 /*--------------------------------------------------------- 
 # Styles Généraux 
----------------------------------------------------------*/ 
+---------------------------------------------------------*/
 :root {
   --blanc: #fff;
   --noir: #000;
@@ -69,8 +69,8 @@ main section {
   font-size: 3vw;
 }
 
-ul.technique-gsap{
-  background: rgba(0,0,0,0.3);
+ul.technique-gsap {
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   font-size: 10px;
   font-family: monospace;
@@ -86,13 +86,13 @@ ul.technique-gsap{
   left: 0;
 }
 
-ul.technique-gsap li{
+ul.technique-gsap li {
   margin: 5px 0;
 }
 
 /*---------------------------------------------------------- 
 # Chapitre 1
-----------------------------------------------------------*/ 
+----------------------------------------------------------*/
 #chap1 {
   overflow: hidden;
   position: relative;
@@ -108,10 +108,10 @@ ul.technique-gsap li{
 /*-- ---------- Début spritesheet spirale -------------------- --*/
 #spritesheet_spirale {
   position: absolute;
-  top: 30vh;
-  left:  100vh;
-  height: 50vh;
-  width: 50vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  width: 50%;
   aspect-ratio: 1 / 1;
   background-image: url("../img/spirale.png");
   animation-name: spirale;
@@ -131,27 +131,45 @@ ul.technique-gsap li{
   }
 }
 
-.is-scrolling #spirale_container #spritesheet_spirale {
+.is-scrolling #spritesheet_spirale {
   animation-play-state: running;
 }
 /*-- ---------- Fin spritesheet spirale -------------------- --*/
 
 #h-debout {
   position: absolute;
-  height: 300vh;
-  left: 10vh;
-  bottom: -200vh;
-  display: block;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+}
 
+#ciel {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
 }
 
 /*---------------------------------------------------------- 
 # Chapitre 2
-----------------------------------------------------------*/ 
+----------------------------------------------------------*/
 #chap2 {
   position: relative;
   background-color: var(--blanc);
-  overflow-y: hidden;
+  overflow: hidden;
+  background-image: url("../img/ciel-etoile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 0%;
+}
+
+#paysage {
+  position: relative;
+  border: 2px solid blue;
+  bottom: -100vh;
 }
 
 #montagne {
@@ -164,33 +182,40 @@ ul.technique-gsap li{
 #h-assit {
   position: absolute;
   height: 20vh;
+  top: -87vh;
   right: 85vh;
-  top: 12.5vh;
 }
 
 #chaise {
   position: absolute;
   height: 20vh;
   right: 85vh;
-  top: 15vh;
+  top: -85vh;
 }
 
 #chap2 .texte {
   position: absolute;
-  right: 5vw;
+  right: 10vw;
   top: 25vh;
 }
 
+#nuage {
+  position: absolute;
+  width: 55vw;
+  right: -6vw;
+  top: 5vw;
+  z-index: -1;
+}
 /*---------------------------------------------------------- 
 # Chapitre 3
-----------------------------------------------------------*/ 
+----------------------------------------------------------*/
 #chap3 {
   position: relative;
   background-color: var(--noir);
 }
 
 /*-- ---------- Début spritesheet oeil -------------------- --*/
-#spritesheet_oeil{
+#spritesheet_oeil {
   position: relative;
   transform: rotate(30deg);
   animation-delay: 2s;
@@ -272,7 +297,7 @@ ul.technique-gsap li{
 
 /*---------------------------------------------------------- 
 # Chapitre 4
-----------------------------------------------------------*/ 
+----------------------------------------------------------*/
 #chap4 {
   position: relative;
   overflow: hidden;
@@ -280,11 +305,15 @@ ul.technique-gsap li{
 }
 
 /*-- ---------- Début Visages -------------------- --*/
+.visage {
+  position: absolute;
+  right: -55vw;
+  top: 5vw;
+}
+
 #visage {
   position: absolute;
-  width: 200vw;
   height: 100vh;
-  right: -59vw;
 }
 
 #visage2 {
@@ -449,7 +478,7 @@ ul.technique-gsap li{
 
 /*---------------------------------------------------------- 
 # Chapitre 5
-----------------------------------------------------------*/ 
+----------------------------------------------------------*/
 #chap5 {
   position: relative;
   overflow: hidden;
@@ -530,7 +559,7 @@ ul.technique-gsap li{
   opacity: 30%;
 }
 
-.ligne.l15{
+.ligne.l15 {
   left: 57.5%;
   opacity: 25%;
 }
@@ -582,6 +611,11 @@ ul.technique-gsap li{
 #chap6 {
   position: relative;
   background-color: var(--blanc);
+  background-image: url("../img/ciel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 0%;
 }
 
 #chap6 .texte {
@@ -589,5 +623,12 @@ ul.technique-gsap li{
   font-style: normal;
   font-size: 8vw;
   left: 20vw;
-  top: 8vw;
+  top: 10vw;
+}
+
+.planete {
+  position: relative;
+  width: 22.5vw;
+  left: 6vw;
+  top: 6vw;
 }

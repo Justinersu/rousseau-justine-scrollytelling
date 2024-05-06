@@ -36,10 +36,9 @@
     <main>
       <!-- ---------- Début Chapitre 1 ------------------ -->
       <section id="chap1">
-        <div id="spirale_container">
-          <div id="spritesheet_spirale"></div>
-        </div>
-        <img id="h-debout" src="./img/homme-debout.png" />
+        <div id="spritesheet_spirale"></div>
+        <img id="h-debout" src="./img/h-debout.png" />
+        <img id="ciel" src="./img/ciel-etoile.png" />
         <div class="texte">
           <p>
             Je veux m'en<br />
@@ -47,12 +46,23 @@
           </p>
         </div>
         <ul class="technique-gsap">
+          <li>timeline de 3 étapes</li>
+          <li>anim du scale de la spirale</li>
           <li>
             scrollTrigger
             <ul>
               <li>trigger=#chap1</li>
+              <li>scrub=true, pour que l'animation suive le rythme scroll</li>
+              <li>
+                pin=true, pour que le chapitre se fixe le temps que l'animation
+                termine
+              </li>
             </ul>
           </li>
+          <li>
+            spritesheet qui s'anime si body contient la classe .is-scrolling
+          </li>
+          <li>anim de l'opacité pour apparaitre le ciel etoile et le texte</li>
         </ul>
       </section>
       <!-- ---------- Fin Chapitre 1 -------------------- -->
@@ -61,9 +71,10 @@
       <section id="chap2">
         <div id="paysage">
           <img id="chaise" src="./img/chaise.png" />
-          <img id="h-assit" src="./img/homme-assit.png" />
+          <img id="h-assit" src="./img/h-assit.png" />
           <img id="montagne" src="./img/montagne.png" />
         </div>
+        <img id="nuage" src="./img/nuage.png" />
         <div class="texte">
           <p>
             Mais comment<br />
@@ -71,12 +82,21 @@
           </p>
         </div>
         <ul class="technique-gsap">
+          <li>timeline de 5 étapes</li>
+          <li>animation en couche de la montagne, chaise et personnage</li>
+          <li>animation en x et opacité du texte</li>
           <li>
             scrollTrigger
             <ul>
               <li>trigger=#chap2</li>
+              <li>scrub=true, pour que l'animation suive le rythme scroll</li>
+              <li>
+                pin=true, pour que le chapitre se fixe le temps que l'animation
+                termine
+              </li>
             </ul>
           </li>
+          <li>parallax en trois couches</li>
         </ul>
       </section>
       <!-- ---------- Fin Chapitre 2 -------------------- -->
@@ -101,19 +121,45 @@
           <p>de moi-même</p>
         </div>
         <ul class="technique-gsap">
+          <li>timeline de 4 étapes</li>
           <li>
             scrollTrigger
             <ul>
               <li>trigger=#chap3</li>
+              <li>scrub=true, pour que l'animation suive le rythme scroll</li>
+              <li>
+                pin=true, pour que le chapitre se fixe le temps que l'animation
+                termine
+              </li>
             </ul>
           </li>
+          <li>
+            spritesheet qui s'anime si body contient la classe .is-scrolling
+          </li>
+          <li>anim de l'opacité pour apparaitre le texte et les oeils</li>
         </ul>
       </section>
       <!-- ---------- Fin Chapitre 3 -------------------- -->
 
       <!-- ---------- Début Chapitre 4 -------------------- -->
       <section id="chap4">
-        <img id="visage" src="./img/visage.svg" />
+        <!-- <img id="visage" src="./img/visage.svg" /> -->
+        <svg
+          class="visage"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0  400 546.06"
+          width="100%"
+          height="80%"
+        >
+          <path
+            id="visage"
+            d="M180.5,1.47S14.26,32.41,43,225.75c-3.97,37.8-28,54-39,72-8,16,4,22,25,31,10.72,16.66-11.3,35.92,3,49-2.5,9.38,2.81,16.8,7.15,21.04,2.95,2.89,4.71,6.79,4.75,10.93.11,12.41-3.49,39.56,13.11,50.02,25.37,20.49,76.06-1.53,91,7,17.6,10.05,32.5,79,32.5,79"
+            fill="none"
+            stroke="#fff"
+            stroke-miterlimit="10"
+            stroke-width="3px"
+          />
+        </svg>
         <img id="visage2" src="./img/visage.svg" />
         <img id="visage3" src="./img/visage.svg" />
         <img id="visage4" src="./img/visage.svg" />
@@ -141,19 +187,27 @@
           </p>
         </div>
         <ul class="technique-gsap">
+          <li>timeline de 21 étapes</li>
           <li>
             scrollTrigger
             <ul>
               <li>trigger=#chap4</li>
+              <li>scrub=true, pour que l'animation suive le rythme scroll</li>
+              <li>
+                pin=true, pour que le chapitre se fixe le temps que l'animation
+                termine
+              </li>
             </ul>
           </li>
+          <li>drawSVG du premier visage</li>
+          <li>apparation en opacité succesive des visages, puis du texte</li>
         </ul>
       </section>
       <!-- ---------- Fin Chapitre 4 -------------------- -->
 
       <!-- ---------- Début Chapitre 5 -------------------- -->
       <section id="chap5">
-        <img id="h-tombe" src="./img/homme-tombe.png" />
+        <img id="h-tombe" src="./img/h-tombe.png" />
         <img class="ligne l1" src="./img/ligne.svg" />
         <img class="ligne l2" src="./img/ligne.svg" />
         <img class="ligne l3" src="./img/ligne.svg" />
@@ -181,13 +235,33 @@
             de mon esprit
           </p>
         </div>
+
+        <svg
+          class="courbe"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 243.78 1324.65"
+        >
+          <path
+            id="descente"
+            d="M243.48.4S15.48,170.4,2.48,304.4s148.25,148.72,161,275C176.97,712.97,21.22,747.21,1.48,862.4c-19.87,116.02,268,404,235,462"
+          />
+        </svg>
+
         <ul class="technique-gsap">
+          <li>timeline de 2 étapes</li>
           <li>
             scrollTrigger
             <ul>
               <li>trigger=#chap5</li>
+              <li>scrub=true, pour que l'animation suive le rythme scroll</li>
+              <li>
+                pin=true, pour que le chapitre se fixe le temps que l'animation
+                termine
+              </li>
             </ul>
           </li>
+          <li>motionPath de l'homme qui tombe</li>
+          <li>anim de l'opacité du texte</li>
         </ul>
       </section>
       <!-- ---------- Fin Chapitre 5 -------------------- -->
@@ -198,13 +272,23 @@
           <p>Autrefois brillants</p>
         </div>
         <ul class="technique-gsap">
+          <li>anim y et x </li>
+          <li>yoyo, répétition infini, power1.inOut</li>
           <li>
             scrollTrigger
             <ul>
               <li>trigger=#chap6</li>
+              <li>scrub=true, pour que l'animation suive le rythme scroll</li>
+              <li>
+                pin=true, pour que le chapitre se fixe le temps que l'animation
+                termine
+              </li>
             </ul>
           </li>
+          <li>animation opacité du texte</li>
+          <li>toggleActions: restart complete reverse reset</li>
         </ul>
+        <img class="planete" src="./img/planete.png" />
       </section>
       <!-- ---------- Fin Chapitre 6 -------------------- -->
     </main>
@@ -223,6 +307,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin3.min.js"></script>
     <script src="./script/script.js"></script>
   </body>
 </html>
