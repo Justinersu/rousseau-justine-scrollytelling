@@ -16,7 +16,7 @@ header {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url("../img/image-accueil.jpg"), var(--noir);
+  background: url("../img/img_arriere_plan/image-accueil.jpg"), var(--noir);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -128,7 +128,7 @@ footer a {
   bottom: 0;
   width: 50%;
   aspect-ratio: 1 / 1;
-  background-image: url("../img/spirale.png");
+  background-image: url("../img/spritesheets/spirale.png");
   animation-name: spirale;
   animation-duration: 1s;
   background-size: 4800% 100%;
@@ -174,7 +174,7 @@ footer a {
   position: relative;
   background-color: var(--blanc);
   overflow: hidden;
-  background-image: url("../img/ciel-etoile.png");
+  background-image: url("../img/img_arriere_plan/ciel-etoile.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -240,7 +240,7 @@ footer a {
   height: 20vw;
   width: 20vw;
   aspect-ratio: 1 / 1;
-  background-image: url("../img/oeil.png");
+  background-image: url("../img/spritesheets/oeil.png");
   animation-name: oeil;
   animation-duration: 1s;
   background-size: 4800% 100%;
@@ -652,7 +652,7 @@ footer a {
 #chap6 {
   position: relative;
   background-color: var(--blanc);
-  background-image: url("../img/ciel.jpg");
+  background-image: url("../img/img_arriere_plan/ciel.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
