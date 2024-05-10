@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         pin: true,
         scrub: true,
-        markers: true,
+        markers: false,
         trigger: `#chap1`,
       },
     })
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         pin: true,
         scrub: true,
-        markers: true,
+        markers: false,
         trigger: `#chap2`,
       },
     })
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       start: "top bottom",
       end: "bottom top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       start: "top bottom",
       end: "bottom top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       start: "top bottom",
       end: "bottom top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       start: "top bottom",
       end: "bottom top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         pin: true,
         scrub: true,
-        markers: true,
+        markers: false,
         trigger: `#chap3`,
       },
     })
@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         pin: true,
         scrub: true,
-        markers: true,
+        markers: false,
         trigger: `#chap4`,
       },
     })
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         pin: true,
         scrub: true,
-        markers: true,
+        markers: false,
         trigger: `#chap5`,
       },
     })
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     opacity: 0,
     scrollTrigger: {
       pin: true,
-      markers: true,
+      markers: false,
       toggleActions: "restart complete reverse reset",
       trigger: "#chap6",
     },
