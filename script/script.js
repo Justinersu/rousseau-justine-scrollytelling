@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(
     ScrollTrigger,
     MotionPathPlugin,
-    DrawSVGPlugin,
-    MorphSVGPlugin
+    /*DrawSVGPlugin,
+    MorphSVGPlugin*/
   );
 
   /*-- ---------- CHAP1 Animation de la spirale -------------------- --*/
@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .to(`#chap1 .texte`, { opacity: 0, duration: 3 }, "<")
     .fromTo(`#ciel`, { opacity: 0, duration: 2 }, { opacity: 1, duration: 2 });
 
-  /*-- ---------- CHAP2 Animation du paysage -------------------- --*/ gsap
+  /*-- ---------- CHAP2 Animation du paysage -------------------- --*/
+   gsap
     .timeline({
       scrollTrigger: {
         pin: true,
@@ -139,6 +140,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       { opacity: 0 },
       { opacity: 1, duration: 4 }
     )
+    /* Morph SVG 
     .to("#oeil", {
       morphSVG: "#larme",
       duration: 30,
@@ -146,7 +148,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .to("#morph", {
       y: "200%",
       duration: 20,
-    })
+    })*/
     .to(
       ".oeil_container",
       {
@@ -174,7 +176,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: `#chap4`,
       },
     })
-    .from("#visage", { drawSVG: 0, duration: 20, ease: "none" })
+    /* Draw SVG
+    .from("#visage", { drawSVG: 0, duration: 20, ease: "none" })*/
     .from(`#visage2`, { opacity: 0, duration: 1 })
     .from(`#visage3`, { opacity: 0, duration: 1 })
     .from(`#visage4`, { opacity: 0, duration: 1 })
