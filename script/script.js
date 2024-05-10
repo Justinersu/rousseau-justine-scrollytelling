@@ -140,8 +140,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       `#chap3 .texte p:nth-child(3)`,
       { opacity: 0 },
       { opacity: 1, duration: 4 }
-<<<<<<< Updated upstream
-=======
     )
     /* Morph SVG 
     .to("#oeil", {
@@ -167,7 +165,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         duration: 10,
       },
       "<"
->>>>>>> Stashed changes
     );
   /*-- ---------- CHAP4 Animation des visages -------------------- --*/
   gsap
