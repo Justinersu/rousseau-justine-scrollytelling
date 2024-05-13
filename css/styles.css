@@ -1,6 +1,21 @@
 /*--------------------------------------------------------- 
 # Styles Généraux 
 ---------------------------------------------------------*/
+@font-face {
+  font-family: 'Urbanist';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v15/L0x4DF02iFML4hGCyMqgXS9sjg.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NJtEtq.woff2) format('woff2');
+}
+
 :root {
   --blanc: #fff;
   --noir: #000;
@@ -16,10 +31,18 @@ header {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url("../img/img_arriere_plan/image-accueil.jpg"), var(--noir);
+  /*background: url("../img/img_arriere_plan/image-accueil.jpg"), var(--noir);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 50%;*/
+}
+
+#accueil {
+  position: absolute;
+  width: 100%;
+  bottom: -15%;
+  filter: grayscale(100%);
+  z-index: -1;
 }
 
 header h1 {
@@ -28,7 +51,7 @@ header h1 {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 5vw;
+  font-size: 4.5vw;
   font-family: "Outfit";
   opacity: 80%;
   font-weight: 500;
@@ -36,7 +59,7 @@ header h1 {
 
 #defiler {
   position: absolute;
-  top: 75%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, 0);
   font-size: 2vw;
@@ -65,7 +88,6 @@ main section {
 
 .texte {
   font-family: "Urbanist";
-  font-style: italic;
   font-size: 3vw;
 }
 

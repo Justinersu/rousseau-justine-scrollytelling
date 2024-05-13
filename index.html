@@ -3,19 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.min.css" />
     <title>Démence</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
   </head>
@@ -24,6 +12,7 @@
     <header>
       <h1>Démence</h1>
       <h2 id="defiler">Défilez vers le bas</h2>
+      <img id="accueil" src="./img/img_arriere_plan/image-accueil.jpg" fetchprioty="high">
       <p>
         Projet scrollytelling créé dans le cadre du cours Optimisation Web -
         Intégration multimédia - Collège Montmorency. © 2024 - Conception :
@@ -38,7 +27,7 @@
       <section id="chap1">
         <div id="spritesheet_spirale"></div>
         <img id="h-debout" src="./img/img_personnage/h-debout.png" />
-        <img id="ciel" src="./img/img_arriere_plan/ciel-etoile.png" />
+        <img id="ciel" loading="lazy" src="./img/img_arriere_plan/ciel-etoile.png" />
         <div class="texte">
           <p>
             Je veux m'en<br />
@@ -70,9 +59,9 @@
       <!-- ---------- Début Chapitre 2 -------------------- -->
       <section id="chap2">
         <div id="paysage">
-          <img id="chaise" src="./img/img_elements_visuels/chaise.png" />
-          <img id="h-assit" src="./img/img_personnage/h-assit.png" />
-          <img id="montagne" src="./img/img_elements_visuels/montagne.png" />
+          <img id="chaise" loading="lazy" src="./img/img_elements_visuels/chaise.png" />
+          <img id="h-assit" loading="lazy" src="./img/img_personnage/h-assit.png" />
+          <img id="montagne" loading="lazy" src="./img/img_elements_visuels/montagne.png" />
         </div>
         <img id="nuage" src="./img/img_elements_visuels/nuage.png" />
         <div class="texte">
@@ -183,25 +172,25 @@
             stroke-width="3px"
           />
         </svg>
-        <img id="visage2" src="./img/svg/visage.svg" />
-        <img id="visage3" src="./img/svg/visage.svg" />
-        <img id="visage4" src="./img/svg/visage.svg" />
-        <img id="visage5" src="./img/svg/visage.svg" />
-        <img id="visage6" src="./img/svg/visage.svg" />
-        <img id="visage7" src="./img/svg/visage.svg" />
-        <img id="visage8" src="./img/svg/visage.svg" />
-        <img id="visage9" src="./img/svg/visage.svg" />
-        <img id="visage10" src="./img/svg/visage.svg" />
-        <img id="visage11" src="./img/svg/visage.svg" />
-        <img id="visage12" src="./img/svg/visage.svg" />
-        <img id="visage13" src="./img/svg/visage.svg" />
-        <img id="visage14" src="./img/svg/visage.svg" />
-        <img id="visage15" src="./img/svg/visage.svg" />
-        <img id="visage16" src="./img/svg/visage.svg" />
-        <img id="visage17" src="./img/svg/visage.svg" />
-        <img id="visage18" src="./img/svg/visage.svg" />
-        <img id="visage19" src="./img/svg/visage.svg" />
-        <img id="visage20" src="./img/svg/visage.svg" />
+        <img id="visage2" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage3" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage4" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage5" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage6" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage7" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage8" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage9" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage10" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage11" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage12" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage13" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage14" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage15" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage16" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage17" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage18" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage19" loading="lazy" src="./img/svg/visage.svg" />
+        <img id="visage20" loading="lazy" src="./img/svg/visage.svg" />
         <div class="texte">
           <p>
             Les contours <br />
@@ -230,7 +219,7 @@
 
       <!-- ---------- Début Chapitre 5 -------------------- -->
       <section id="chap5">
-        <img id="h-tombe" src="./img/img_personnage/h-tombe.png" />
+        <img id="h-tombe" loading="lazy" src="./img/img_personnage/h-tombe.png" />
         <img class="ligne l1" src="./img/svg/ligne.svg" />
         <img class="ligne l2" src="./img/svg/ligne.svg" />
         <img class="ligne l3" src="./img/svg/ligne.svg" />
@@ -310,7 +299,7 @@
           <li>animation opacité du texte</li>
           <li>toggleActions: restart complete reverse reset</li>
         </ul>
-        <img class="planete" src="./img/img_elements_visuels/planete.png" />
+        <img class="planete" loading="lazy" src="./img/img_elements_visuels/planete.png" />
       </section>
       <!-- ---------- Fin Chapitre 6 -------------------- -->
     </main>
@@ -333,6 +322,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
     <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin3.min.js"></script> -->
-    <script src="./script/script.js"></script>
+    <script src="./script/script.min.js"></script>
   </body>
 </html>
