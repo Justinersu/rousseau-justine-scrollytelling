@@ -31,10 +31,6 @@ header {
   position: relative;
   width: 100vw;
   height: 100vh;
-  /*background: url("../img/img_arriere_plan/image-accueil.jpg"), var(--noir);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50%;*/
 }
 
 #accueil {
@@ -83,7 +79,6 @@ main section {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  /*border: 1px solid red;*/
 }
 
 .texte {
@@ -106,9 +101,6 @@ ul.technique-gsap {
   z-index: 1000;
   top: 0;
   left: 0;
-  /**/
-  display: none;
-  /**/
 }
 
 ul.technique-gsap li {
